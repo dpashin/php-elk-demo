@@ -37,10 +37,9 @@ echo 'deb http://packages.elasticsearch.org/logstash/2.0/debian stable main' | s
 sudo apt-get update
 sudo apt-get install logstash
 
-exit
 ## set default index pattern
 
-sudo apt-get install jq
+sudo apt-get -y install jq
 url="http://localhost:5601"
 index_pattern="filebeat-*"
 time_field="@timestamp"

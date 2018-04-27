@@ -36,12 +36,3 @@ Demo environment with two boxes:
     ````
     curl -X POST 'http://localhost:9200/demoapp/helloworld/1' -d '{ "message": "Hello World!" }' -H 'Content-Type: application/json'
     ````
-## TROUBLESHOOTING
-
-### proxy blocks downloading base vagrant image
-
-recipe: https://stackoverflow.com/questions/28399324/download-vagrant-box-file-locally-from-atlas-and-configuring-it
-tldr:
-
-    wget https://app.vagrantup.com/ubuntu/boxes/xenial64/versions/20180419.0.0/providers/virtualbox.box
-    vagrant box add --name="ubuntu/xenial64" file:///C:/dev/boxes/xenial-server-cloudimg-amd64-vagrant.box 
