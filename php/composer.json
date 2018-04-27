@@ -1,0 +1,12 @@
+{
+    "name": "php-elk-demo/php",
+    "require": {
+        "monolog/monolog": "^1.23"
+    },
+    "authors": [
+        {
+            "name": "Dmitriy Pashin",
+            "email": "dmitriy.pashin@yandex.ru"
+        }
+    ]
+}
