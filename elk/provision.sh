@@ -17,7 +17,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D27D666CD88E42B4
 
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 sudo apt-get update
-sudo apt-get install elasticsearch
+sudo apt-get -y install elasticsearch
 
 sudo echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 sudo iptables -I INPUT -p tcp --dport 9200 -j ACCEPT
@@ -28,7 +28,7 @@ sudo /etc/init.d/elasticsearch start
 ## install kibana 6.
 ## recipe: https://www.elastic.co/guide/en/kibana/current/deb.html
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
-sudo apt-get update && sudo apt-get install kibana
+sudo apt-get update && sudo apt-get -y install kibana
 sudo echo "server.host: "0.0.0.0"" >> /etc/kibana/kibana.yml
 sudo /etc/init.d/kibana start
 
